@@ -20,7 +20,7 @@ class BlogIndex extends React.Component {
         />
 
         <Img fluid={data.doodle.childImageSharp.fluid} />
-        <p>
+        <p style={{ textAlign: 'center' }}>
           Hi! I'm Eustace, a passionate software engineer. This is where to find
           my writings, if you need them
         </p>

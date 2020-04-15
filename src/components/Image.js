@@ -17,7 +17,17 @@ const Image = props => {
               marginBottom: '1rem',
             }}
           >
-            <Img fluid={node.childImageSharp && node.childImageSharp.fluid} />
+            <Img
+              fluid={node.childImageSharp && node.childImageSharp.fluid}
+              style={{
+                width: '100vw',
+                position: 'relative',
+                left: '50%',
+                right: '50%',
+                marginLeft: '-50vw',
+                marginRight: '-50vw',
+              }}
+            />
           </div>
         )
       }}

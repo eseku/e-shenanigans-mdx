@@ -8,11 +8,11 @@ const Footer = () => {
         color: 'white',
         padding: '3rem',
         width: '100%',
+        display: 'flex',
+        justifyContent: 'center',
       }}
     >
-      © {new Date().getFullYear()}, Built with
-      {` `}
-      <a href="https://www.gatsbyjs.org">Gatsby</a>
+      © {new Date().getFullYear()}, Made With ❤ by Joojo Quartey
     </footer>
   )
 }

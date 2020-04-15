@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import { Link } from 'gatsby'
 import Footer from './Footer'
 import { rhythm, scale } from '../utils/typography'
+// import '../utils/normalize.css'
 import '../utils/index.css'
 
 class Layout extends React.Component {
@@ -37,7 +38,7 @@ class Layout extends React.Component {
             </h1>
           </div>
           <div style={{}}>
-            <h3 style={{}}>
+            <h1 style={{}}>
               <Link
                 style={{
                   boxShadow: `none`,
@@ -46,9 +47,9 @@ class Layout extends React.Component {
                 }}
                 to={`/blog`}
               >
-                Blog
+                blog
               </Link>
-            </h3>
+            </h1>
           </div>
         </div>
       )

@@ -10,7 +10,6 @@ class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
-    console.log(data, 'data')
 
     return (
       <Layout location={this.props.location} title={siteTitle}>

@@ -9,9 +9,10 @@ class Layout extends React.Component {
   render() {
     const { location, title, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
+    const blogPath = `${__PATH_PREFIX__}/blog`
     let header
 
-    if (location.pathname === rootPath) {
+    if (location.pathname === rootPath || location.pathname === blogPath) {
       header = (
         <div
           style={{
@@ -43,7 +44,7 @@ class Layout extends React.Component {
                 style={{
                   boxShadow: `none`,
                   textDecoration: `none`,
-                  color: `inherit`,
+                  color: `#4a90e2`,
                 }}
                 to={`/blog`}
               >
@@ -59,7 +60,7 @@ class Layout extends React.Component {
           <h3
             style={{
               fontFamily: `Montserrat, sans-serif`,
-              marginTop: 0,
+              marginTop: '1rem',
               marginBottom: rhythm(-1),
             }}
           >
@@ -67,11 +68,11 @@ class Layout extends React.Component {
               style={{
                 boxShadow: `none`,
                 textDecoration: `none`,
-                color: `inherit`,
+                color: `4a90e2`,
               }}
-              to={`/`}
+              to={`/blog`}
             >
-              {title}
+              {'blog'}
             </Link>
           </h3>
         </div>

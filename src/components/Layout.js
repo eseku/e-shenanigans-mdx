@@ -17,8 +17,7 @@ class Layout extends React.Component {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            padding: '1rem 1rem',
-            // ...scale(1.5),
+            padding: '0rem 1rem',
             marginBottom: rhythm(1.5),
             marginTop: 0,
           }}
@@ -91,7 +90,7 @@ class Layout extends React.Component {
             flexGrow: 1,
             maxWidth: rhythm(50),
             margin: '0 auto',
-            padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+            padding: `${rhythm(0.2)} ${rhythm(3 / 4)}`,
             // border: `1px solid black`,
           }}
         >

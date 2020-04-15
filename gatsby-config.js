@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `e-shenanigans`,
+    title: `eus'`,
     author: `Joojo Quartey`,
     description: `An extension of the gatsby starter blog, with support for MDX`,
     siteUrl: `https://gatsby-starter-blog-mdx-demo.netlify.com/`,

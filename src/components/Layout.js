@@ -1,7 +1,8 @@
 import React, { Fragment } from 'react'
 import { Link } from 'gatsby'
-
+import Footer from './Footer'
 import { rhythm, scale } from '../utils/typography'
+import '../utils/index.css'
 
 class Layout extends React.Component {
   render() {
@@ -16,16 +17,14 @@ class Layout extends React.Component {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
+            padding: '1rem 1rem',
+            // ...scale(1.5),
+            marginBottom: rhythm(1.5),
+            marginTop: 0,
           }}
         >
-          <div>
-            <h1
-              style={{
-                ...scale(1.5),
-                marginBottom: rhythm(1.5),
-                marginTop: 0,
-              }}
-            >
+          <div style={{}}>
+            <h1>
               <Link
                 style={{
                   boxShadow: `none`,
@@ -38,14 +37,8 @@ class Layout extends React.Component {
               </Link>
             </h1>
           </div>
-          <div>
-            <h3
-              style={{
-                // ...scale(1.5),
-                marginBottom: rhythm(1.5),
-                marginTop: 0,
-              }}
-            >
+          <div style={{}}>
+            <h3 style={{}}>
               <Link
                 style={{
                   boxShadow: `none`,
@@ -62,46 +55,52 @@ class Layout extends React.Component {
       )
     } else {
       header = (
-        <h3
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
-            marginBottom: rhythm(-1),
-          }}
-        >
-          <Link
+        <div>
+          <h3
             style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
+              fontFamily: `Montserrat, sans-serif`,
+              marginTop: 0,
+              marginBottom: rhythm(-1),
             }}
-            to={`/`}
           >
-            {title}
-          </Link>
-        </h3>
+            <Link
+              style={{
+                boxShadow: `none`,
+                textDecoration: `none`,
+                color: `inherit`,
+              }}
+              to={`/`}
+            >
+              {title}
+            </Link>
+          </h3>
+        </div>
       )
     }
     return (
-      <Fragment>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          minHeight: '100vh',
+          flex: 1,
+        }}
+      >
         <div
           style={{
-            marginLeft: `auto`,
-            marginRight: `auto`,
+            flexGrow: 1,
             maxWidth: rhythm(50),
+            margin: '0 auto',
             padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+            // border: `1px solid black`,
           }}
         >
           {header}
           {children}
         </div>
 
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </Fragment>
+        <Footer />
+      </div>
     )
   }
 }

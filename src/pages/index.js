@@ -37,7 +37,8 @@ class BlogIndex extends React.Component {
             </div>
           )
         })} */}
-        I am Joojo, a passionate and learningsoftware engineer. This is my blog.
+        I am Joojo, a passionate and learning software engineer. This is my
+        blog.
       </Layout>
     )
   }

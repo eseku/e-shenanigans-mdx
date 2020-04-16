@@ -28,8 +28,8 @@ function Bio() {
               }}
             />
             <p>
-              Written by <strong>{author}</strong> from Ghana who keeps building
-              silly things.
+              By <strong>{author}</strong> from Ghana who keeps building silly
+              things.
               {` `}
               <a href={`https://twitter.com/${social.twitter}`}>
                 Follow me on twitter

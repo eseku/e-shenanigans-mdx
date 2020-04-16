@@ -3,7 +3,7 @@ module.exports = {
     title: `eus'`,
     author: `Joojo Quartey`,
     description: `An extension of the gatsby starter blog, with support for MDX`,
-    siteUrl: `https://gatsby-starter-blog-mdx-demo.netlify.com/`,
+    siteUrl: `https://eus.now.sh`,
     social: {
       twitter: `esekuu`,
     },
@@ -132,8 +132,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Eus' Blog`,
+        short_name: `eus`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,

@@ -19,14 +19,14 @@ const Image = props => {
           >
             <Img
               fluid={node.childImageSharp && node.childImageSharp.fluid}
-              style={{
-                width: '100vw',
-                position: 'relative',
-                left: '50%',
-                right: '50%',
-                marginLeft: '-50vw',
-                marginRight: '-50vw',
-              }}
+              // style={{
+              //   width: '100vw',
+              //   position: 'relative',
+              //   left: '50%',
+              //   right: '50%',
+              //   marginLeft: '-50vw',
+              //   marginRight: '-50vw',
+              // }}
             />
           </div>
         )
@@ -42,8 +42,8 @@ const preQuery = graphql`
         name
         ext
         childImageSharp {
-          fluid(maxWidth: 1000) {
-            ...GatsbyImageSharpFluid
+          fluid(maxWidth: 5500) {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }

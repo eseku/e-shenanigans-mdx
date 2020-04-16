@@ -1,7 +1,4 @@
 body {
-  margin: 0 !important;
-
-  padding: 0 !important;
   font-family: 'oxygen';
   font-size: 16px;
 }
@@ -26,4 +23,9 @@ body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: black;
+}
+
+pre {
+  overflow: auto;
+  white-space: pre-wrap;
 }

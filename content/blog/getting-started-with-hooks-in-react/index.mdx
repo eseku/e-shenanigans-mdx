@@ -9,43 +9,42 @@ In this writing we would discuss and delve into the how to get started and the W
 
 ### WHAT ... and some slight history you didn't ask for.
 
-Previously, right up until 20th December, 2018 - the release date of React v16.7.0, 
-React had a couple of issues with stateless, function components.  Yes now obviously they were stateless because there was not a "good" 
-way to manage state in these function components. Now class components which were introduced first with React, brought up several issues 
-including the "this" problem, the having to bind event handlers" problem, etc, but you could only use the React state in class components, 
+Previously, right up until 20th December, 2018 - the release date of React v16.7.0,
+React had a couple of issues with stateless, function components. Yes now obviously they were stateless because there was not a "good"
+way to manage state in these function components. Now class components which were introduced first with React, brought up several issues
+including the "this" problem, the having to bind event handlers" problem, etc, but you could only use the React state in class components,
 by declaring the state as an object in the constructor of your class.
 
+> React Hooks are functions that let us "hook into" some React features
+> such as State and Lifecycle features from inside function components.
 
-> React Hooks are functions that let us "hook into" some React features 
-> such as State and Lifecycle features from inside function components. 
-
-
-Hooks allow us to easily manipulate the state of our functional component 
-without needing to convert them into class components. **Hooks do NOT work in class components, 
+Hooks allow us to easily manipulate the state of our functional component
+without needing to convert them into class components. **Hooks do NOT work in class components,
 as their purpose is to help you to avoid class based components.**
 
 ### Rules
+
 Hooks are JavaScript functions, but they impose two additional rules:
 
 1. Don’t call Hooks inside loops, conditions, or nested functions — 
-Only call Hooks **at the top level of the function**
-.
+   Only call Hooks **at the top level of the function**
+   .
 2. Don’t call Hooks from regular JavaScript functions — Only call Hooks **from React function components**
 
-___
+---
 
 ### Note
 
 1. Returns a stateful value and a function to update it —  useState
 2. Lets you perform side effects in function components —  useEffect
 3. Accepts a context object (the value returned from React.createContext) and returns the current context value,
-as given by the nearest context provider for the given context — 
-useContext
+   as given by the nearest context provider for the given context — 
+   useContext
 
 ### Let's go ahead and create a simple functional component with the useState hook to add state.
 
-Supposing we have a component and we want to keep track of the current count as the user clicks on a button which increases the count, 
-I am going to demonstrate that with both class and a function component, 
+Supposing we have a component and we want to keep track of the current count as the user clicks on a button which increases the count,
+I am going to demonstrate that with both class and a function component,
 starting with the class based component. Let's call our component something random, like Clicker.
 
 ```js
@@ -74,25 +73,23 @@ starting with the class based component. Let's call our component something rand
           )
       }
    }
- 
+
 ```
 
-
-In our Clicker class component, we can initialize the state property in our constructor method and use it in our render method by the "this" keyword. 
+In our Clicker class component, we can initialize the state property in our constructor method and use it in our render method by the "this" keyword.
 Now what you need to know about the useState Hook is that it, upon its invocation, returns an array.
-Now that array contains two elements, the first being a stateful value, defaulting to the value of the 
-first argument you supplied to the function, and the next being another function to be used to update the state value. 
-The  useState Hook can be used as many times in a function component, with each useState call handling a 
+Now that array contains two elements, the first being a stateful value, defaulting to the value of the
+first argument you supplied to the function, and the next being another function to be used to update the state value.
+The useState Hook can be used as many times in a function component, with each useState call handling a
 particular stateful value as opposed to class components where you put all state values in your state object.
-
 
 ```js
 //function Component
   import React, {useState} from "react"
-     const [count, updateCount] = useState(0)     
+     const [count, updateCount] = useState(0)
      function increaseCount () {
          updateCount(count + 1)
-     }     
+     }
          return(
             <p>Current count is {count}</p>
             <button
@@ -109,11 +106,7 @@ Alternatively this can be done this way
 
 ```js
 //destructuring
-  const data = useState(0)
-  const count = data[0]
-  const updateCount = useState[1]
+const data = useState(0)
+const count = data[0]
+const updateCount = useState[1]
 ```
-
-
-
-

@@ -23,19 +23,13 @@ class Layout extends React.Component {
     if (location.pathname === rootPath || location.pathname === blogPath) {
       header = (
         <RootPageWrapper>
-          <div>
-            <RootPageLeft.HomeLink to={`/`}>
-              <RootPageLeft.Header>{title}</RootPageLeft.Header>
-            </RootPageLeft.HomeLink>
-          </div>
-          <div>
-            <ThemeToggler />
-          </div>
-          <div>
-            <RootPageRight.HomeLink to={'/blog'}>
-              <RootPageRight.Header>blog</RootPageRight.Header>
-            </RootPageRight.HomeLink>
-          </div>
+          <RootPageLeft.HomeLink to={`/`}>
+            <RootPageLeft.Header>{title}</RootPageLeft.Header>
+          </RootPageLeft.HomeLink>
+          <ThemeToggler />
+          <RootPageRight.HomeLink to={'/blog'}>
+            <RootPageRight.Header>blog</RootPageRight.Header>
+          </RootPageRight.HomeLink>
         </RootPageWrapper>
       )
     } else {

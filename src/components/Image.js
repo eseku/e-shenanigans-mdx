@@ -42,7 +42,7 @@ const preQuery = graphql`
         name
         ext
         childImageSharp {
-          fluid(maxWidth: 600) {
+          fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }

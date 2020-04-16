@@ -32,19 +32,17 @@ export const wrapRootElement = ({ element }) => {
 }
 
 const ThemeProvider1 = ({ element }) => {
-  const stored  
-  
-  if (typeof window !== 'undefined') {
+  let stored
+
+  if (typeof window !== 'undefined')
     stored = !!localStorage.getItem('isDarkMode')
-}
-  
-  
+
   const [isDarkMode, setIsDarkMode] = useState(stored === 'true' ? true : false)
 
   function toggleTheme() {
     setIsDarkMode(!isDarkMode)
     if (typeof window !== 'undefined') {
-      localStorage.setItem('isDarkMode', !isDarkMode)  
+      localStorage.setItem('isDarkMode', !isDarkMode)
     }
   }
 

@@ -11,6 +11,7 @@ import {
   Content,
 } from '../../static/styled-components/components/layout'
 import '../utils/index.css'
+import ThemeToggler from './ThemeToggler'
 
 class Layout extends React.Component {
   render() {
@@ -26,6 +27,9 @@ class Layout extends React.Component {
             <RootPageLeft.HomeLink to={`/`}>
               <RootPageLeft.Header>{title}</RootPageLeft.Header>
             </RootPageLeft.HomeLink>
+          </div>
+          <div>
+            <ThemeToggler />
           </div>
           <div>
             <RootPageRight.HomeLink to={'/blog'}>

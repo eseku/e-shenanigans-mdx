@@ -1,4 +1,5 @@
 export default {
+  name: 'light',
   colors: {
     backgroundColor: '#fff',
     highlightColor: '#4A90E2',

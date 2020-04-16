@@ -4,6 +4,6 @@ export default styled.div`
   flex-direction: column;
   min-height: 100vh;
   flex: 1;
-  background-color: ${props => props.theme.colors.backgroundColor};
-  color: ${props => props.theme.colors.textColor};
+  background-color: ${props => props.theme.currentTheme.colors.backgroundColor};
+  color: ${props => props.theme.currentTheme.colors.textColor};
 `

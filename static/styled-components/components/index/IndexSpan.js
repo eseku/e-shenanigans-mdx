@@ -2,5 +2,5 @@ import styled from 'styled-components'
 
 export default styled.h1`
   margin-top: 0;
-  color: ${props => props.theme.colors.highlightColor};
+  color: ${props => props.theme.currentTheme.colors.highlightColor};
 `

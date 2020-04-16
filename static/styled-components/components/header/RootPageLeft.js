@@ -4,9 +4,9 @@ export default {
   HomeLink: styled(Link)`
     box-shadow: none,
     text-decoration: none,
-    color: ${props => props.theme.colors.textColor}
+    color: ${props => props.theme.currentTheme.colors.textColor}
   `,
   Header: styled.h1`
-    color: ${props => props.theme.colors.textColor};
+    color: ${props => props.theme.currentTheme.colors.textColor};
   `,
 }

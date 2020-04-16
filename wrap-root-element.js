@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { MDXProvider } from '@mdx-js/react'
 import { Code } from './src/components/code'
 import { preToCodeBlock } from 'mdx-utils'
@@ -23,9 +23,28 @@ const components = {
   Image,
 }
 
-const shortcodes = { Image }
-export const wrapRootElement = ({ element }) => (
-  <MDXProvider components={components}>
-    <ThemeProvider theme={Dark}>{element}</ThemeProvider>
-  </MDXProvider>
-)
+export const wrapRootElement = ({ element }) => {
+  return (
+    <MDXProvider components={components}>
+      <ThemeProvider1 element={element} />
+    </MDXProvider>
+  )
+}
+
+const ThemeProvider1 = ({ element }) => {
+  const stored = !!localStorage.getItem('isDarkMode')
+  const [isDarkMode, setIsDarkMode] = useState(stored === 'true' ? true : false)
+
+  function toggleTheme() {
+    setIsDarkMode(!isDarkMode)
+    localStorage.setItem('isDarkMode', !isDarkMode)
+  }
+
+  return (
+    <ThemeProvider
+      theme={{ currentTheme: isDarkMode ? Dark : Light, toggleTheme }}
+    >
+      {element}
+    </ThemeProvider>
+  )
+}

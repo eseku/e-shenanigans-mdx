@@ -5,7 +5,7 @@ import { Link } from 'gatsby'
 export default {
   Header: styled.h3`
     margin-bottom: ${rhythm(0.25)};
-    color: ${props => props.theme.colors.highlightColor};
+    color: ${props => props.theme.currentTheme.colors.highlightColor};
   `,
   Link: styled(Link)`
     box-shadow: none;

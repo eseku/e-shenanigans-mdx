@@ -5,5 +5,5 @@ export default styled.p`
   font-family: raleway;
   font-size: 18px;
   margin-top: 5rem;
-  color: ${props => props.theme.colors.textColor};
+  color: ${props => props.theme.currentTheme.colors.textColor};
 `

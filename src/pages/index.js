@@ -18,12 +18,15 @@ class BlogIndex extends React.Component {
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
 
-        <Img fluid={data.doodle.childImageSharp.fluid} />
+        <div style={{ marginTop: '5rem' }}>
+          <Img fluid={data.doodle.childImageSharp.fluid} />
+        </div>
         <p
           style={{
             textAlign: 'center',
             fontFamily: 'raleway',
             fontSize: '18px',
+            marginTop: '5rem',
           }}
         >
           Hallo! Ich bin
@@ -46,7 +49,7 @@ export const pageQuery = graphql`
       id
       childImageSharp {
         fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid_tracedSVG
+          ...GatsbyImageSharpFluid_noBase64
         }
       }
     }

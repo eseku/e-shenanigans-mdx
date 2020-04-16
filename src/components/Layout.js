@@ -100,7 +100,7 @@ class Layout extends React.Component {
           {children}
         </div>
 
-        <Footer />
+        {location.pathname !== rootPath && <Footer />}
       </div>
     )
   }

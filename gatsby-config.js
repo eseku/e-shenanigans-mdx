@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `eus'`,
     author: `Joojo Quartey`,
-    description: `Personal Blog by Joojo Quartey.`,
+    description: `Personal Blog by Joojo Quartey, from Ghana`,
     siteUrl: `https://eus.now.sh`,
     image: `/profile-pic.jpg`,
     social: {

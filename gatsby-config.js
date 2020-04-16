@@ -2,8 +2,9 @@ module.exports = {
   siteMetadata: {
     title: `eus'`,
     author: `Joojo Quartey`,
-    description: `An extension of the gatsby starter blog, with support for MDX`,
+    description: `Personal Blog by Joojo Quartey.`,
     siteUrl: `https://eus.now.sh`,
+    image: `/profile-pic.jpg`,
     social: {
       twitter: `esekuu`,
     },

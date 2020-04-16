@@ -4,6 +4,9 @@ import { Code } from './src/components/code'
 import { preToCodeBlock } from 'mdx-utils'
 import Image from './src/components/Image'
 
+import { ThemeProvider } from 'styled-components'
+import { Light, Dark } from './static/styled-components/themes'
+
 // components is its own object outside of render so that the references to
 // components are stable
 const components = {
@@ -22,5 +25,7 @@ const components = {
 
 const shortcodes = { Image }
 export const wrapRootElement = ({ element }) => (
-  <MDXProvider components={components}>{element}</MDXProvider>
+  <MDXProvider components={components}>
+    <ThemeProvider theme={Dark}>{element}</ThemeProvider>
+  </MDXProvider>
 )

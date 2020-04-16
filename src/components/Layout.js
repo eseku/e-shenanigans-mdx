@@ -1,8 +1,15 @@
-import React, { Fragment } from 'react'
-import { Link } from 'gatsby'
+import React from 'react'
 import Footer from './Footer'
-import { rhythm, scale } from '../utils/typography'
-// import '../utils/normalize.css'
+import {
+  RootPageWrapper,
+  RootPageLeft,
+  RootPageRight,
+  ArticleHeader,
+} from '../../static/styled-components/components/header'
+import {
+  Wrapper,
+  Content,
+} from '../../static/styled-components/components/layout'
 import '../utils/index.css'
 
 class Layout extends React.Component {
@@ -14,94 +21,36 @@ class Layout extends React.Component {
 
     if (location.pathname === rootPath || location.pathname === blogPath) {
       header = (
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            padding: '0rem 1rem',
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <div style={{}}>
-            <h1>
-              <Link
-                style={{
-                  boxShadow: `none`,
-                  textDecoration: `none`,
-                  color: `inherit`,
-                }}
-                to={`/`}
-              >
-                {title}
-              </Link>
-            </h1>
+        <RootPageWrapper>
+          <div>
+            <RootPageLeft.HomeLink to={`/`}>
+              <RootPageLeft.Header>{title}</RootPageLeft.Header>
+            </RootPageLeft.HomeLink>
           </div>
-          <div style={{}}>
-            <h1 style={{}}>
-              <Link
-                style={{
-                  boxShadow: `none`,
-                  textDecoration: `none`,
-                  color: `#4a90e2`,
-                }}
-                to={`/blog`}
-              >
-                blog
-              </Link>
-            </h1>
+          <div>
+            <RootPageRight.HomeLink to={'/blog'}>
+              <RootPageRight.Header>blog</RootPageRight.Header>
+            </RootPageRight.HomeLink>
           </div>
-        </div>
+        </RootPageWrapper>
       )
     } else {
       header = (
         <div>
-          <h3
-            style={{
-              fontFamily: `Montserrat, sans-serif`,
-              marginTop: '1rem',
-              marginBottom: rhythm(-1),
-            }}
-          >
-            <Link
-              style={{
-                boxShadow: `none`,
-                textDecoration: `none`,
-                color: `4a90e2`,
-              }}
-              to={`/blog`}
-            >
-              {'blog'}
-            </Link>
-          </h3>
+          <ArticleHeader.Link to="/blog">
+            <ArticleHeader.Header>blog</ArticleHeader.Header>
+          </ArticleHeader.Link>
         </div>
       )
     }
     return (
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          minHeight: '100vh',
-          flex: 1,
-        }}
-      >
-        <div
-          style={{
-            flexGrow: 1,
-            maxWidth: rhythm(50),
-            margin: '0 auto',
-            padding: `${rhythm(0.2)} ${rhythm(3 / 4)}`,
-            // border: `1px solid black`,
-          }}
-        >
+      <Wrapper>
+        <Content>
           {header}
           {children}
-        </div>
-
+        </Content>
         {location.pathname !== rootPath && <Footer />}
-      </div>
+      </Wrapper>
     )
   }
 }

@@ -1,9 +1,8 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import Bio from '../components/Bio'
-import Layout from '../components/Layout'
-import SEO from '../components/seo'
+import { Bio, Layout, SEO } from '../components'
 import { rhythm } from '../utils/typography'
+import { IndexListItem } from '../../static/styled-components/components/blog-index'
 
 const BlogPosts = props => {
   const { data } = props
@@ -20,15 +19,9 @@ const BlogPosts = props => {
         const title = node.frontmatter.title || node.fields.slug
         return (
           <div key={node.fields.slug}>
-            <h3
-              style={{
-                marginBottom: rhythm(1 / 4),
-              }}
-            >
-              <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                {title}
-              </Link>
-            </h3>
+            <IndexListItem.Link to={node.fields.slug}>
+              <IndexListItem.Header>{title}</IndexListItem.Header>
+            </IndexListItem.Link>
             <small>{node.frontmatter.date}</small>
             <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
           </div>

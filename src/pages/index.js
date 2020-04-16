@@ -19,7 +19,13 @@ class BlogIndex extends React.Component {
         />
 
         <Img fluid={data.doodle.childImageSharp.fluid} />
-        <p style={{ textAlign: 'center' }}>
+        <p
+          style={{
+            textAlign: 'center',
+            fontFamily: 'raleway',
+            fontSize: '18px',
+          }}
+        >
           Hallo! Ich bin
           <span>
             <h1 style={{ marginTop: 0, color: '#4a90e2' }}>Eustace</h1>

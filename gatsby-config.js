@@ -10,6 +10,15 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-web-font-loader`,
+      options: {
+        custom: {
+          families: ['Graphik', 'dank', 'arvo', 'raleway', 'oxygen'],
+          urls: ['/fonts/fonts.css'],
+        },
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blog`,

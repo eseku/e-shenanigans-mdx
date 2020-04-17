@@ -2,8 +2,7 @@ import React, { useState } from 'react'
 import { MDXProvider } from '@mdx-js/react'
 import { Code } from './src/components/code'
 import { preToCodeBlock } from 'mdx-utils'
-import Image from './src/components/Image'
-
+import { Image, Blockquote } from './src/components'
 import { ThemeProvider } from 'styled-components'
 import { Light, Dark } from './static/styled-components/themes'
 
@@ -21,6 +20,7 @@ const components = {
     }
   },
   Image,
+  Blockquote,
 }
 
 export const wrapRootElement = ({ element }) => {

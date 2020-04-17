@@ -37,6 +37,10 @@ pre {
 
 a {
   color: #08c708;
+  text-decoration: none !important;
+  font-weight: 700;
+  outline: none;
+  border: none;
 }
 
 @media (max-width: 600px) {

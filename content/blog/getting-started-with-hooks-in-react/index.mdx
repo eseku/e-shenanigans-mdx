@@ -48,31 +48,29 @@ I am going to demonstrate that with both class and a function component,
 starting with the class based component. Let's call our component something random, like Clicker.
 
 ```js
-  //Class Based Component
+//Class Based Component
 
-  import React, {Component} from "react"
- class Clicker extends Component {
-      constructor(props){
-          super(props)
-          this.state = {count: 0}
-         this.increaseCount = this.increaseCount.bind(this)
-      }
-
-      function increaseCount () {
-          this.setState({count: this.state.count + 1})
-      }
-
-      render(){
-          return(
-             <p>Current count is {this.state.count} </p>
-             <button
-                 onClick={increaseCount}
-             >
-               Add
-             </button>
-          )
-      }
+import React, {Component} from "react"
+class Clicker extends Component {
+   constructor(props){
+       super(props)
+       this.state = {count: 0}
+      this.increaseCount = this.increaseCount.bind(this)
    }
+    function increaseCount () {
+       this.setState({count: this.state.count + 1})
+   }
+    render(){
+       return(
+          <p>Current count is {this.state.count} </p>
+          <button
+              onClick={increaseCount}
+          >
+            Add
+          </button>
+       )
+   }
+}
 
 ```
 
@@ -85,20 +83,20 @@ particular stateful value as opposed to class components where you put all state
 
 ```js
 //function Component
-  import React, {useState} from "react"
-     const [count, updateCount] = useState(0)
-     function increaseCount () {
-         updateCount(count + 1)
-     }
-         return(
-            <p>Current count is {count}</p>
-            <button
-                onClick={increaseCount}
-            >
-              Add
-            </button>
-         )
+import React, {useState} from "react"
+   const [count, updateCount] = useState(0)
+   function increaseCount () {
+       updateCount(count + 1)
    }
+    return(
+       <p>Current count is {count}</p>
+       <button
+           onClick={increaseCount}
+       >
+         Add
+       </button>
+    )
+}
 ```
 
 In our function component example, the return value from the useState hook was destructured into two variables.

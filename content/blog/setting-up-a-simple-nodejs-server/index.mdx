@@ -69,18 +69,17 @@ npm install express --save
 This would add express to your projects dependencies and make it an available module to import in other files. A node-modules directory would be created automatically and would house all packages you install with npm. NPM caches packages too, which is very great! So if you do not have internet connection but have installed a package before, trust NPM to still make that package available to your node-modules folder.
 
 Next, create an index.js file in the root of your directory and input the following code
-
 ```js
 //index.js
- const express = require('express')
- const app = express()
- const port = 3000
- app.get('/', (req,res)=>{
-  res.send("Hello World")
- })
- app.listen(port, ()=>{
-  console.log('Server is running on port'+ port)
- })
+const express = require('express')
+const app = express()
+const port = 3000
+app.get('/', (req,res)=>{
+ res.send("Hello World")
+})
+app.listen(port, ()=>{
+ console.log('Server is running on port'+ port)
+})
 ```
 
 Now in your terminal, run in the root of your project

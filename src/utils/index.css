@@ -49,4 +49,12 @@ a {
     font-size: x-small;
     font-family: 'raleway';
   }
+
+  .container {
+    width: 100%;
+  }
+}
+
+.container {
+  width: 55rem;
 }

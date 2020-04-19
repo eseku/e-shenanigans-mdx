@@ -27,7 +27,9 @@ class BlogPostTemplate extends React.Component {
         >
           {post.frontmatter.date}
         </p>
-        <MDXRenderer>{post.body}</MDXRenderer>
+        <div className="container">
+          <MDXRenderer>{post.body}</MDXRenderer>
+        </div>
         <hr
           style={{
             marginBottom: rhythm(1),

@@ -49,12 +49,10 @@ a {
     font-size: x-small;
     font-family: 'raleway';
   }
-
-  .container {
-    width: 100%;
-  }
 }
 
-.container {
-  width: 55rem;
+@media (min-width: 1240px) {
+  .blog-post-container {
+    width: 55rem;
+  }
 }

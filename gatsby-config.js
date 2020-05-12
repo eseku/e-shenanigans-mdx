@@ -14,9 +14,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {
-        // Setting a color is optional.
         color: `#08C708`,
-        // Disable the loading spinner.
         showSpinner: false,
       },
     },
@@ -25,7 +23,7 @@ module.exports = {
       options: {
         includePaths: ['/', { regex: '^/blog/' }, '/covid19'],
         // excludePaths: ['/blog/beep-beep-lettuce'],
-        height: 5,
+        height: 3,
         prependToBody: true,
         color: `#08C708`,
       },

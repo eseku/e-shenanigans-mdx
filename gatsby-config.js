@@ -18,7 +18,7 @@ module.exports = {
         // excludePaths: ['/blog/beep-beep-lettuce'],
         height: 3,
         prependToBody: true,
-        color: `tomato`,
+        color: `#08C708`,
       },
     },
     {

@@ -14,7 +14,7 @@ const Image = props => {
         return (
           <div
             style={{
-              marginBottom: '1rem',
+              marginBottom: '2rem',
             }}
           >
             <Img fluid={node.childImageSharp && node.childImageSharp.fluid} />

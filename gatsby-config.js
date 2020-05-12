@@ -12,6 +12,16 @@ module.exports = {
   plugins: [
     `gatsby-plugin-styled-components`,
     {
+      resolve: 'gatsby-plugin-page-progress',
+      options: {
+        includePaths: ['/', { regex: '^/blog/' }, '/covid19'],
+        // excludePaths: ['/blog/beep-beep-lettuce'],
+        height: 3,
+        prependToBody: true,
+        color: `tomato`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-web-font-loader`,
       options: {
         custom: {

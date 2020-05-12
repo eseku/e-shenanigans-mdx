@@ -2,6 +2,7 @@ const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.createPages = ({ graphql, actions }) => {
+  console.log('create pages run')
   const { createPage } = actions
 
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
@@ -39,6 +40,7 @@ exports.createPages = ({ graphql, actions }) => {
       const previous = index === posts.length - 1 ? null : posts[index + 1].node
       const next = index === 0 ? null : posts[index - 1].node
 
+      console.log(post.node.fields.slug)
       createPage({
         path: post.node.fields.slug,
         component: blogPost,
@@ -54,13 +56,14 @@ exports.createPages = ({ graphql, actions }) => {
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
-
+  console.log('on create node run')
   if (node.internal.type === `Mdx`) {
     const value = createFilePath({ node, getNode })
+    console.log('value', value)
     createNodeField({
       name: `slug`,
       node,
-      value,
+      value: `/blog${value}`,
     })
   }
 }

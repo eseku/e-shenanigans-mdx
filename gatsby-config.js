@@ -12,11 +12,20 @@ module.exports = {
   plugins: [
     `gatsby-plugin-styled-components`,
     {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: `#08C708`,
+        // Disable the loading spinner.
+        showSpinner: false,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-page-progress',
       options: {
         includePaths: ['/', { regex: '^/blog/' }, '/covid19'],
         // excludePaths: ['/blog/beep-beep-lettuce'],
-        height: 3,
+        height: 5,
         prependToBody: true,
         color: `#08C708`,
       },

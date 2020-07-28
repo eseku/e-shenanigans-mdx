@@ -26,7 +26,7 @@ function Index(props) {
         <span>
           <IndexSpan>Eustace</IndexSpan>
         </span>
-        ein leidenschaftlicher Softwareentwickler. Hier finden sie meine
+        ein leidenschaftlicher Softwareentwickler. Hier findet euch meine
         schriften 😊
       </IndexParagraph>
     </Layout>

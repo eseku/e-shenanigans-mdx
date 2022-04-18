@@ -22,12 +22,11 @@ function Index(props) {
       </IndexImageContainer>
 
       <IndexParagraph>
-        Hallo! Ich bin
+        Hallo! Ich heiße
         <span>
           <IndexSpan>Eustace</IndexSpan>
         </span>
-        ein leidenschaftlicher Softwareentwickler. Hier findet euch meine
-        schriften 😊
+        Ich bin ja ein leidenschaftlicher Softwareentwickler. Hier findet ihr meine Schriften 😊
       </IndexParagraph>
     </Layout>
   )
